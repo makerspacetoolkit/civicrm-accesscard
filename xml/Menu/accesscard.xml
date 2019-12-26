@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/accesscard</path>
+    <page_callback>CRM_Accesscard_Form_CardID</page_callback>
+    <title>CardID</title>
+    <access_arguments>administer CiviCRM</access_arguments>
+  </item>
+</menu>

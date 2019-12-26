@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<table>
+  <base>CRM/Accesscard</base>
+  <class>Cards</class>
+  <name>civicrm_mstk_cards</name>
+  <comment>FIXME</comment>
+  <add>4.4</add>
+  <log>true</log>
+
+  <field>
+    <name>id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>Unique Cards ID</comment>
+    <add>4.4</add>
+  </field>
+  <primaryKey>
+    <name>id</name>
+    <autoincrement>true</autoincrement>
+  </primaryKey>
+
+  <field>
+    <name>contact_id</name>
+    <type>int unsigned</type>
+    <comment>FK to Contact</comment>
+    <add>4.4</add>
+  </field>
+  <foreignKey>
+    <name>contact_id</name>
+    <table>civicrm_contact</table>
+    <key>id</key>
+    <add>4.4</add>
+    <onDelete>CASCADE</onDelete>
+  </foreignKey>
+  <index>
+    <name>contact_id</name>
+    <fieldName>contact_id</fieldName>
+    <unique>true</unique>
+  </index>
+  
+
+<field>
+    <name>card_id</name>
+    <type>int unsigned</type>
+    <required>true</required>
+    <comment>card UUID</comment>
+    <add>4.4</add>
+  </field>
+  <index>
+    <name>card_id</name>
+    <fieldName>card_id</fieldName>
+    <unique>true</unique>
+  </index>
+</table>
